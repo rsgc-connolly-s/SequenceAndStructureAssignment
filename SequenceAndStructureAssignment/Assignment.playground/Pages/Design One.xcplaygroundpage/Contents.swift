@@ -107,6 +107,14 @@ canvas.drawEllipse(centreX: 250, centreY: 350, width: 45, height: 45)
 //Draw inner Square Pattern 
 
 canvas.drawRectangle(bottomLeftX: 123, bottomLeftY: 123, width: 55, height: 55)
+
+canvas.drawRectangle(bottomLeftX: 323, bottomLeftY: 323, width: 55, height: 55)
+
+canvas.drawRectangle(bottomLeftX: 123, bottomLeftY: 323, width: 55, height: 55)
+
+canvas.drawRectangle(bottomLeftX: 323, bottomLeftY: 123, width: 55, height: 55)
+
+canvas.drawRectangle(bottomLeftX: 223, bottomLeftY: 223, width: 55, height: 55)
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
