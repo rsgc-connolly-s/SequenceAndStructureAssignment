@@ -83,25 +83,30 @@ canvas.borderColor = Color.black
 canvas.fillColor = Color.white
 canvas.drawRectangle(bottomLeftX: 100, bottomLeftY: 100, width: 300, height: 300)
 
-//Draw Inner Square patterm 
-canvas.drawRectangle(bottomLeftX: 100, bottomLeftY: 300, width: 100, height: 100)
-canvas.drawRectangle(bottomLeftX: 130, bottomLeftY: 330, width: 40, height: 40)
+//Draw Inner Square Grid
+for x in stride(from: 100, through:300, by: 100){
+    for y in stride(from: 100, through: 300, by: 100){
+          canvas.drawRectangle(bottomLeftX: x, bottomLeftY: y, width: 100, height: 100)
+    }
 
-canvas.drawRectangle(bottomLeftX: 100, bottomLeftY: 100, width: 100, height: 100)
-canvas.drawRectangle(bottomLeftX: 130, bottomLeftY: 130, width: 40, height: 40)
+}
 
-canvas.drawRectangle(bottomLeftX: 300, bottomLeftY: 100, width: 100, height: 100)
-canvas.drawRectangle(bottomLeftX: 330, bottomLeftY: 130, width: 40, height: 40)
+//Draw Inner Circle Pattern
+canvas.drawEllipse(centreX: 150, centreY: 250, width: 90, height: 90)
+canvas.drawEllipse(centreX: 150, centreY: 250, width: 45, height: 45)
 
-canvas.drawRectangle(bottomLeftX: 300, bottomLeftY: 300, width: 100, height: 100)
-canvas.drawRectangle(bottomLeftX: 330, bottomLeftY: 330, width: 40, height: 40)
+canvas.drawEllipse(centreX: 250, centreY: 150, width: 90, height: 90)
+canvas.drawEllipse(centreX: 250, centreY: 150, width: 45, height: 45)
 
-canvas.drawRectangle(bottomLeftX: 200, bottomLeftY: 200, width: 100, height: 100)
-canvas.drawRectangle(bottomLeftX: 230, bottomLeftY: 230, width: 40, height: 40)
+canvas.drawEllipse(centreX: 350, centreY: 250, width: 90, height: 90)
+canvas.drawEllipse(centreX: 350, centreY: 250, width: 45, height: 45)
 
-//Draw Inner Circle Pattern 
-canvas.drawEllipse(centreX: 150, centreY: 250, width: 40, height: 20)
-canvas.drawEllipse(centreX: 150, centreY: 250, width: 100, height: 100)
+canvas.drawEllipse(centreX: 250, centreY: 350, width: 90, height: 90)
+canvas.drawEllipse(centreX: 250, centreY: 350, width: 45, height: 45)
+
+//Draw inner Square Pattern 
+
+canvas.drawRectangle(bottomLeftX: 123, bottomLeftY: 123, width: 55, height: 55)
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
