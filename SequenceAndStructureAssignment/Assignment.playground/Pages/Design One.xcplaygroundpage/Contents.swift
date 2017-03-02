@@ -21,27 +21,16 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 500, height: 500)
 
-//// Generate a grid
-//canvas.drawShapesWithFill = false
-//canvas.defaultBorderWidth = 1
-//
-//
-//// This loop makes a 10 rows of columns
-//for r in stride(from: 25, through: 475, by: 50){
-//    
-//    // This loop makes a single column, bottom to top
-//    for c in stride(from: 25, through: 475, by: 50) {
-//        
-//        // Draw the shapes
-//        canvas.drawEllipse(centreX: r, centreY: c, width: 2, height: 2)
-//        canvas.drawRectangle(centreX: r, centreY: c, width: 50, height: 50)
-//    }
-//}
+//Create Main Color
+var MC = random(from: 0, toButNotIncluding: 360)
+
+//Create Complimentry Color
+var SC = MC - 180
 
 //draw outer square
 canvas.drawShapesWithFill = true
 canvas.drawShapesWithBorders = true
-canvas.borderColor = Color.black
+canvas.borderColor = Color(hue: MC, saturation: 100, brightness: 100, alpha: 100)
 canvas.fillColor = Color.white
 canvas.drawRectangle(bottomLeftX: 1, bottomLeftY: 1, width: 498, height: 498)
 
@@ -49,13 +38,13 @@ canvas.drawRectangle(bottomLeftX: 1, bottomLeftY: 1, width: 498, height: 498)
 //draw second outer square
 canvas.drawShapesWithFill = true
 canvas.drawShapesWithBorders = true
-canvas.borderColor = Color.black
+canvas.borderColor = Color(hue: SC, saturation: 100, brightness: 100, alpha: 100)
 canvas.fillColor = Color.white
 canvas.drawRectangle(bottomLeftX: 50, bottomLeftY: 50, width: 400, height: 400)
 
 
 
-//Draw Baclground Pattern
+//Draw Background Pattern
 
 for x in stride(from: 20, through: 500, by: 50){
     for y in stride(from:20, through: 475, by: 50){
@@ -63,12 +52,14 @@ for x in stride(from: 20, through: 500, by: 50){
         if number == 0{
             canvas.drawShapesWithFill = false
             canvas.drawShapesWithBorders = true
+            canvas.borderColor = Color(hue: MC, saturation: 100, brightness: 100, alpha: 100)
             canvas.defaultBorderWidth = 1
             canvas.drawRectangle(bottomLeftX: x, bottomLeftY: y, width: 10, height: 10)
             canvas.drawRectangle(bottomLeftX: x-5, bottomLeftY: y-5, width: 20, height: 20)
         }else{
             canvas.drawShapesWithFill = false
             canvas.drawShapesWithBorders = true
+            canvas.borderColor = Color(hue: SC, saturation: 100, brightness: 100, alpha: 100)
             canvas.defaultBorderWidth = 1
             canvas.drawEllipse(centreX: x+5, centreY: y+5, width: 10, height: 10)
             canvas.drawEllipse(centreX: x+5, centreY: y+5, width: 20, height: 20)
@@ -78,20 +69,23 @@ for x in stride(from: 20, through: 500, by: 50){
 
 //Draw Shape to cover background
 canvas.drawShapesWithFill = true
-canvas.drawShapesWithBorders = true
+canvas.drawShapesWithBorders = false
 canvas.borderColor = Color.black
 canvas.fillColor = Color.white
 canvas.drawRectangle(bottomLeftX: 100, bottomLeftY: 100, width: 300, height: 300)
 
 //Draw Inner Square Grid
+canvas.drawShapesWithBorders = true
 for x in stride(from: 100, through:300, by: 100){
     for y in stride(from: 100, through: 300, by: 100){
+        canvas.borderColor = Color(hue: MC, saturation: 100, brightness: 100, alpha: 100)
           canvas.drawRectangle(bottomLeftX: x, bottomLeftY: y, width: 100, height: 100)
     }
 
 }
 
 //Draw Inner Circle Pattern
+canvas.borderColor = Color(hue: SC, saturation: 100, brightness: 100, alpha: 100)
 canvas.drawEllipse(centreX: 150, centreY: 250, width: 90, height: 90)
 canvas.drawEllipse(centreX: 150, centreY: 250, width: 45, height: 45)
 
@@ -106,6 +100,7 @@ canvas.drawEllipse(centreX: 250, centreY: 350, width: 45, height: 45)
 
 //Draw inner Square Pattern 
 
+canvas.borderColor = Color(hue: MC, saturation: 100, brightness: 100, alpha: 100)
 canvas.drawRectangle(bottomLeftX: 123, bottomLeftY: 123, width: 55, height: 55)
 
 canvas.drawRectangle(bottomLeftX: 323, bottomLeftY: 323, width: 55, height: 55)
