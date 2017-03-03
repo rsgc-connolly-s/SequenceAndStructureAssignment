@@ -31,7 +31,7 @@ var SC = (MC + 180) % 360
 canvas.drawShapesWithFill = true
 canvas.drawShapesWithBorders = true
 canvas.borderColor = Color(hue: MC, saturation: 100, brightness: 100, alpha: 100)
-canvas.fillColor = Color.black
+canvas.fillColor = Color.white
 canvas.drawRectangle(bottomLeftX: 1, bottomLeftY: 1, width: 498, height: 498)
 
 
@@ -39,7 +39,7 @@ canvas.drawRectangle(bottomLeftX: 1, bottomLeftY: 1, width: 498, height: 498)
 canvas.drawShapesWithFill = true
 canvas.drawShapesWithBorders = true
 canvas.borderColor = Color(hue: SC, saturation: 100, brightness: 100, alpha: 100)
-canvas.fillColor = Color.black
+canvas.fillColor = Color.white
 canvas.drawRectangle(bottomLeftX: 50, bottomLeftY: 50, width: 400, height: 400)
 
 
@@ -70,7 +70,7 @@ for x in stride(from: 20, through: 500, by: 50){
 //Draw Shape to cover background
 canvas.drawShapesWithFill = true
 canvas.drawShapesWithBorders = false
-canvas.fillColor = Color.black
+canvas.fillColor = Color.white
 canvas.drawRectangle(bottomLeftX: 100, bottomLeftY: 100, width: 300, height: 300)
 
 //Draw Inner Square Grid
