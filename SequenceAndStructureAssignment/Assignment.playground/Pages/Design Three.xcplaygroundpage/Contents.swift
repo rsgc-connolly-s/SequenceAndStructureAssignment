@@ -21,22 +21,7 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 500, height: 500)
 
-// Generate a grid
-canvas.drawShapesWithFill = false
-canvas.defaultBorderWidth = 1
-
-// This loop makes a 10 rows of columns
-for x in stride(from: 25, through: 475, by: 50){
-    
-    // This loop makes a single column, bottom to top
-    for y in stride(from: 25, through: 475, by: 50) {
-        
-        // Draw the shapes
-        canvas.drawEllipse(centreX: x, centreY: y, width: 2, height: 2)
-        canvas.drawRectangle(centreX: x, centreY: y, width: 50, height: 50)
-    }
-}
-
+let linestartX = random(from: 1, toButNotIncluding: 2)
 
 /*:
  ## Template code
