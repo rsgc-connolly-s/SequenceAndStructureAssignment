@@ -19,9 +19,8 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 500, height: 500)
 
-let linestartX = random(from: 1, toButNotIncluding: 2)
+
 
 /*:
  ## Template code
